@@ -6,12 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>Laravel-Application</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
-    
+   {{--  <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}"> --}}
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <meta name="theme-color" content="#7952b3">
 
 
@@ -38,30 +38,14 @@
 <header>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="#">COMMERCE</a>
+    <a class="navbar-brand" href="{{ route('home.page') }}"><i class="las la-store"></i> COMMERCE</a>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav justify-content-end me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+          <a class="nav-link active" aria-current="page" href="#">Produits <i class="lab la-gulp"></i> </a>
         </li>
       </ul>
+      <a href="#" class="text-light"><h1><i class="las la-dumpster"></i></h1></a>
     </div>
   </div>
 </nav>
@@ -72,7 +56,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         
-        <h1 class="fw-light">Album example</h1>
+        <h1 class="fw-light">Album example <i class="lab la-envira"></i> </h1>
         <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
         <p>
           <a href="#" class="btn btn-primary my-2">Main call to action</a>

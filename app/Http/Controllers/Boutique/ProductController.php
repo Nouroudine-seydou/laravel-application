@@ -21,4 +21,12 @@ class ProductController extends Controller
             'products' => $this->productRepository->getAllProducts()
         ]);
     }
+
+    public function showProduct($slug, int $id) {
+        $product = Product::find($id)->first();
+        if($product->slug != $slug){
+            return redirect()->route('product.show', ['slug' => $product->slug,'id' => $product->id]);
+        }
+        return view('product/show', ['product' => $product]);
+    }
 }

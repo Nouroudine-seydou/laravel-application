@@ -16,7 +16,7 @@ class ProductRepository {
     public function getAllProducts() {
         return $this->product->newQuery()
                             ->select()
-                            //->limit(12)
+                            ->limit(15)
                             ->get();
     }   
 }
