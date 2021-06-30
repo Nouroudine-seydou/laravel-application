@@ -26,7 +26,9 @@ class ProductFactory extends Factory
             'price' => $this->faker->randomFloat(2, 0, 12000),
             'description' => $this->faker->paragraphs(10, true),
             'slug' => $this->faker->slug(),
-            'image' => 'https://picsum.photos/'
+            'image' => 'https://picsum.photos/',
+            'created_at' => $this->faker->dateTimeBetween(),
+            'updated_at' => null
         ];
     }
 }

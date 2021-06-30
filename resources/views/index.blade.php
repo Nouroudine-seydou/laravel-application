@@ -42,7 +42,7 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav justify-content-end me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Produits <i class="lab la-gulp"></i> </a>
+          <a class="nav-link active" aria-current="page" href="{{ route('home.page') }}">Produits <i class="lab la-gulp"></i> </a>
         </li>
       </ul>
       <a href="#" class="text-light"><h1><i class="las la-dumpster"></i></h1></a>
