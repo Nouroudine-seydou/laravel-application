@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::permanentRedirect('/', '/boutique');
 
 require ("Boutique/web.php");
-/* 
+
 Route::fallback(function () { 
 
     return redirect('/boutique');
     
-}); */
+});
+
+require ('Auth/web.php');
