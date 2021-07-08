@@ -16,7 +16,7 @@ class ProductController extends Controller
     }
 
     public function index() {
-        return view('admin/index', ['products' => $this->productRepository->slice(1, 15)]);
+        return view('admin/index', ['products' => $this->productRepository->slice(0, 12)]);
     }
 
 }

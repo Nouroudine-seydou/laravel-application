@@ -14,17 +14,7 @@ class ProductRepository {
     }
 
     public function getAllProducts() {
-        return $this->product->newQuery()
-                            ->select()
-                            ->limit(15)
-                            ->get();
+        return $this->product->newQuery()->select('*')->get();
     }   
-
-    public function slice(int $offset, int $limit){
-        return $this->product->newQuery()
-                            ->select()
-                            ->offset($offset)
-                            ->limit($limit)
-                            ->get();
-    }
+    
 }

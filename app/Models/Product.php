@@ -24,8 +24,6 @@ class Product extends Model
 
     public function run()
     {
-        Product::factory()
-                ->count(1500)
-                ->create();
+        Product::factory()->count(1500)->create();
     }
 }

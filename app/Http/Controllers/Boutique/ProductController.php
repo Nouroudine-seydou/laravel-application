@@ -16,13 +16,13 @@ class ProductController extends Controller
         $this->productRepository = $productRepository;
     }
 
-    public function showAllProducts () {
+    public function index () {
         return view('product/index', [
-            'products' => $this->productRepository->getAllProducts()
+            'products' => Product::paginate(10)
         ]);
     }
 
-    public function showProduct($slug, int $id) {
+    public function show($slug, int $id) {
         $product = Product::find($id)->first();
         if($product->slug != $slug){
             return redirect()->route('product.show', ['slug' => $product->slug,'id' => $product->id]);

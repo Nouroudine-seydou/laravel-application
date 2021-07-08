@@ -1,8 +1,5 @@
 @extends('index')
-
-
 @section('content')
-
 @include('partials/header')
   <div class="row">
   @foreach ($products as $product)
@@ -20,4 +17,22 @@
     </div>
   @endforeach
   </div>
+  <div class="text-align-center">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        @if ($products->currentPage() != 1)
+          <li class="page-item"><a class="page-link" href="{{ $products->previousPageUrl() }}">Previous</a></li>
+        @endif
+        @foreach ($products->getUrlRange($products->currentPage() - 5, $products->currentPage() + 5) as $key => $pageUrl)
+          @if ($key > 0 && $key < $products->lastPage())
+            <li class="page-item {{ $products->currentPage() == $key ? 'active' : ''}}"><a class="page-link" href="{{ $pageUrl }}">{{ $key }}</a></li>
+          @endif
+        @endforeach
+        @if ($products->currentPage() != $products->lastPage())
+          <li class="page-item"><a class="page-link" href="{{ $products->nextPageUrl() }}">Next</a></li>
+        @endif
+      </ul>
+    </nav>
+  </div>
+
 @stop
